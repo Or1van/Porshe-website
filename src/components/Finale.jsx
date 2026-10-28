@@ -58,7 +58,8 @@ export function Finale() {
             CC BY-SA 4.0
           </a>
           ; compressed for the web. Model photos from Wikimedia Commons, CC BY-SA 4.0 — each photographer is credited
-          in the photo viewer.
+          in the photo viewer. Educational project —{' '}
+          <a href="#disclaimer">read the disclaimer</a>.
         </p>
       </footer>
     </section>

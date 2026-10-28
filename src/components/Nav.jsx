@@ -6,6 +6,7 @@ const LINKS = [
   ['Services', '#services'],
   ['About company', '#about'],
   ['Contact', '#contact'],
+  ['Disclaimer', '#disclaimer'],
 ]
 
 export function Nav() {

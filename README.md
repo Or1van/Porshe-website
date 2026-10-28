@@ -5,7 +5,8 @@ The car drives in on load, turns 360° as you scroll, can be spun by hand, and i
 
 ![Hero](docs/screenshots/hero.jpg)
 
-> Fan-made concept. Not affiliated with, endorsed by or connected to Porsche AG.
+> Educational, non-commercial project. Not affiliated with, endorsed by or connected to Porsche AG.
+> All third-party materials belong to their authors — see the in-site **Disclaimer** (`/#disclaimer`) and [Credits](#credits-and-licences).
 
 ## Features
 

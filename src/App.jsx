@@ -11,6 +11,7 @@ import { Hero } from './components/Hero'
 import { Spin } from './components/Spin'
 import { Models } from './components/Models'
 import { Finale } from './components/Finale'
+import { Disclaimer } from './components/Disclaimer'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -159,6 +160,7 @@ export default function App() {
         />
         <Finale />
       </main>
+      <Disclaimer />
     </div>
   )
 }

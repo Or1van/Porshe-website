@@ -922,6 +922,89 @@ section {
   background: rgba(14, 11, 13, 0.7);
 }
 
+/* ---------- Disclaimer ---------- */
+.legal {
+  width: min(720px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--bg-2);
+  color: var(--ink);
+}
+
+.legal::backdrop {
+  background: rgba(5, 3, 4, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.legal__body {
+  padding: clamp(24px, 5vw, 48px);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.legal h2 {
+  margin: 0 0 16px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 64px);
+  line-height: 1;
+  color: var(--pink);
+}
+
+.legal__body:focus {
+  outline: none;
+}
+
+.legal__lead {
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.legal h3 {
+  margin: 28px 0 6px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.legal p {
+  margin: 0 0 10px;
+  max-width: 62ch;
+}
+
+.legal ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.legal li + li {
+  margin-top: 4px;
+}
+
+.legal a {
+  color: var(--pink);
+}
+
+.legal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  transition: background 0.3s;
+}
+
+.legal__close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* ---------- Finale ---------- */
 .finale {
   padding: 0 var(--gutter);
@@ -1073,7 +1156,7 @@ section {
   }
 
   .nav.is-open .nav__links {
-    max-height: 320px;
+    max-height: 380px;
     padding: 20px 0 10px;
   }
 
