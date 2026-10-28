@@ -1,3 +1,7 @@
+// Public files resolve against Vite's base, so the site also works under a sub-path
+// (e.g. GitHub Pages: npm run build -- --base=/Porshe-website/)
+const asset = (path) => import.meta.env.BASE_URL + path
+
 // ---------------------------------------------------------------------------
 // 3D model
 // Drop your own .glb into public/models/ and point `url` at it.
@@ -7,8 +11,8 @@
 // https://sketchfab.com/3d-models/free-porsche-911-carrera-4s-d01b254483794de3819786d93e0e1ebf
 // Compressed with gltf-transform (draco + webp). GLTFLoader strips dots from names: Cylinder.000 → Cylinder000
 export const MODEL = {
-  url: '/models/porsche-911.glb',
-  draco: '/draco/',
+  url: asset('models/porsche-911.glb'),
+  draco: asset('draco/'),
   // rotation that makes the car's nose face the camera at rotY = 0
   rotationY: 0,
   // the model is rescaled so its longest side equals this (world units)
@@ -78,10 +82,10 @@ export const MODELS = [
     accel: '3.2 sec',
     top: '296 km/h',
     color: '#e9a8c6',
-    model: { url: '/models/gt3rs.glb', rotationY: 0, match: GENERIC_MATCH },
+    model: { url: asset('models/gt3rs.glb'), rotationY: 0, match: GENERIC_MATCH },
     photos: [
-      { src: '/images/gt3rs-1.jpg', alt: 'Yellow 911 GT3 RS from the front', ...commons('Porsche 992 GT3 RS DSC 9055.jpg', 'Alexander Migl') },
-      { src: '/images/gt3rs-2.jpg', alt: 'Grey 911 GT3 RS from the rear, showing the swan-neck wing', ...commons('Porsche 911 GT3 RS (2022) 1X7A7164.jpg', 'Alexander-93') },
+      { src: asset('images/gt3rs-1.jpg'), alt: 'Yellow 911 GT3 RS from the front', ...commons('Porsche 992 GT3 RS DSC 9055.jpg', 'Alexander Migl') },
+      { src: asset('images/gt3rs-2.jpg'), alt: 'Grey 911 GT3 RS from the rear, showing the swan-neck wing', ...commons('Porsche 911 GT3 RS (2022) 1X7A7164.jpg', 'Alexander-93') },
     ],
   },
   {
@@ -92,10 +96,10 @@ export const MODELS = [
     accel: '3.0 sec',
     top: '312 km/h',
     color: '#f1efef',
-    model: { url: '/models/gts.glb', rotationY: 0, match: GENERIC_MATCH },
+    model: { url: asset('models/gts.glb'), rotationY: 0, match: GENERIC_MATCH },
     photos: [
-      { src: '/images/gts-1.jpg', alt: 'White 911 Carrera GTS from the front', ...commons('Porsche 911 (992) Carrera GTS.jpg', 'MrWalkr') },
-      { src: '/images/gts-2.jpg', alt: 'Red 911 Carrera 4 GTS from the rear', ...commons('Porsche 992 Carrera 4 GTS 1X7A7209.jpg', 'Alexander-93') },
+      { src: asset('images/gts-1.jpg'), alt: 'White 911 Carrera GTS from the front', ...commons('Porsche 911 (992) Carrera GTS.jpg', 'MrWalkr') },
+      { src: asset('images/gts-2.jpg'), alt: 'Red 911 Carrera 4 GTS from the rear', ...commons('Porsche 992 Carrera 4 GTS 1X7A7209.jpg', 'Alexander-93') },
     ],
   },
   {
@@ -106,10 +110,10 @@ export const MODELS = [
     accel: '2.7 sec',
     top: '330 km/h',
     color: '#223a6e',
-    model: { url: '/models/turbos.glb', rotationY: 0, match: GENERIC_MATCH },
+    model: { url: asset('models/turbos.glb'), rotationY: 0, match: GENERIC_MATCH },
     photos: [
-      { src: '/images/turbos-1.jpg', alt: 'Grey 911 Turbo S with gold wheels', ...commons('Porsche 992 Turbo S 1X7A6046 (cropped).jpg', 'Alexander Migl') },
-      { src: '/images/turbos-2.jpg', alt: 'White 911 Turbo S from the front', ...commons('Porsche 992 Turbo S 1X7A0411.jpg', 'Alexander Migl') },
+      { src: asset('images/turbos-1.jpg'), alt: 'Grey 911 Turbo S with gold wheels', ...commons('Porsche 992 Turbo S 1X7A6046 (cropped).jpg', 'Alexander Migl') },
+      { src: asset('images/turbos-2.jpg'), alt: 'White 911 Turbo S from the front', ...commons('Porsche 992 Turbo S 1X7A0411.jpg', 'Alexander Migl') },
     ],
   },
 ]
